@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import 'welcome_screen.dart';
+import 'login_screen.dart';
+import 'signup_screen.dart';
 import 'auth_screen.dart';
 import 'home_screen.dart';
 import 'create_new_screen.dart';
 import 'setup_wings_screen.dart';
 import 'dashboard_screen.dart';
 import 'Directory/emergency_numbers.dart';
-import 'Directory/members_screen.dart';
 import 'Directory/vehicles_screen.dart';
 import 'Interaction/meetings_screen.dart';
 import 'Interaction/announcements_screen.dart';
@@ -82,7 +84,10 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => const AuthScreen(),
+        '/': (context) => const WelcomeScreen(),
+        '/login': (context) => const LoginScreen(),
+        '/signup': (context) => const SignUpScreen(),
+        '/auth': (context) => const AuthScreen(),
         '/home': (context) => const HomeScreen(),
         '/create_new': (context) => const CreateNewScreen(),
         '/setup_wings': (context) => const SetupWingsScreen(),
